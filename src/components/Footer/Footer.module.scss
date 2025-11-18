@@ -1,0 +1,40 @@
+$primary-color: #007bff;
+$text-color: #333;
+$footer-bg: #f8f9fa;
+$padding-base: 15px;
+
+.footerContainer {
+  background-color: $footer-bg;
+  color: $text-color;
+  padding: $padding-base * 2 $padding-base;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+
+  p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.socialLinks {
+  margin-top: $padding-base;
+
+  a {
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: $text-color;
+
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+}

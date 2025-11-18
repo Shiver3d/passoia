@@ -1,12 +1,20 @@
-import { useState } from 'react'
 import Header from './components/Header/index.jsx'
+import Banner from './components/Banner/index.jsx'
+import Looks from './components/Looks/index.jsx'
+import Batoes from './components/Card-batoes/index.jsx'
+import Novidades from './components/Novidades/index.jsx'
+import Footer from './components/Footer/index.jsx'
+
 
 function App(){
   return (
     <>
       <Header/>
-      <h1>passoia</h1>
-      <h2>testando react</h2>
+      <Banner/>
+      <Looks/>
+      <Batoes/>
+      <Novidades/>
+      <Footer/>
     </>
   )
 }
