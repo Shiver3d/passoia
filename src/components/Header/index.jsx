@@ -3,13 +3,13 @@ import Logo from '../../assets/LogoPrincipal.png';
 import styles from './Header.module.scss';
 
 function Header() {
-  // State to control the dark mode
+  // estado para controlar o tema escuro
   const [darkMode, setDarkMode] = useState(false);
 
-  // Function to toggle dark mode
+  // Função para alternar o tema escuro
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    // Add or remove the .dark-theme class from the body
+    // Aplicar ou remover a classe de tema escuro no body
     document.body.classList.toggle('dark-theme');
   };
 

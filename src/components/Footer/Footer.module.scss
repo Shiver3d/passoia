@@ -36,7 +36,6 @@
   padding-top: 1rem;
 }
 
-/* Dark Mode Styles */
 body.dark-theme .footer {
   background-color: #333;
   color: #fff;
@@ -50,7 +49,7 @@ body.dark-theme .copyright {
   border-top-color: #555;
 }
 
-/* Responsive Styles */
+// responsividade
 @media (max-width: 768px) {
   .footerColumns {
     grid-template-columns: 1fr;

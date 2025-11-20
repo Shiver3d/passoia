@@ -4,7 +4,7 @@ import Rosto from '../../assets/Rosto.png';
 import Tendencia from '../../assets/Tendencia.png';
 import styles from './Looks.module.scss';
 
-// Component to display a grid of images with captions
+// componente de apresentação de looks e tipos de maquiagem
 function Looks() {
   return (
     <section className={styles.looks}>

@@ -1,7 +1,7 @@
-import NovidadesImg from '../../assets/Tendencia.png';
+import NovidadesImg from '../../assets/Novidades.png';
 import styles from './Novidades.module.scss';
 
-// Component to display the new products banner
+// html de apresentação de novidades com outro banner
 function Novidades() {
   return (
     <section className={styles.novidades}>

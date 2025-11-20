@@ -38,7 +38,7 @@
   border-radius: 5px;
 }
 
-/* Dark Mode Styles */
+
 body.dark-theme .header {
   background-color: #333;
   color: #fff;
@@ -53,7 +53,7 @@ body.dark-theme .toggleButton {
   color: #000;
 }
 
-/* Responsive Styles */
+// Responsividade
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

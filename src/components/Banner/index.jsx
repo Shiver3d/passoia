@@ -1,7 +1,7 @@
 import BannerImg from '../../assets/Banner.png';
 import styles from './Banner.module.scss';
 
-// Component to display the main banner
+// componente de banner principal
 function Banner() {
   return (
     <section className={styles.banner}>

@@ -3,16 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
 }
 
 .bannerImage {
   width: 100%;
-  max-width: 1200px;
   height: auto;
 }
 
-/* Dark Mode Styles */
 body.dark-theme .banner {
   background-color: #444;
 }
