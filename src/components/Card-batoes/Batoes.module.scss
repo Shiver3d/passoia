@@ -1,0 +1,104 @@
+.lancamentos {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.imageContainer {
+  flex: 1;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.info {
+  flex: 1;
+  text-align: left;
+}
+
+.colorOptions {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.colorButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.vermelho { background-color: #ff0000; }
+.rosa { background-color: #ffc0cb; }
+.roxo { background-color: #800080; }
+.marrom { background-color: #a52a2a; }
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.buyButton {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.paymentMethods {
+  margin-top: 1rem;
+}
+
+.paymentMethods img {
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+/* Dark Mode Styles */
+body.dark-theme .lancamentos {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark-theme .card {
+  background-color: #333;
+}
+
+body.dark-theme .buyButton {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 468px) {
+  .info {
+    text-align: center;
+  }
+
+  .colorOptions {
+    justify-content: center;
+  }
+}

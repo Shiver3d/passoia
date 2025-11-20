@@ -1,0 +1,18 @@
+.novidades {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.novidadesImage {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
+
+/* Dark Mode Styles */
+body.dark-theme .novidades {
+  background-color: #444;
+}

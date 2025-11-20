@@ -1,40 +1,59 @@
-$primary-color: #007bff;
-$text-color: #333;
-$footer-bg: #f8f9fa;
-$padding-base: 15px;
-
-.footerContainer {
-  background-color: $footer-bg;
-  color: $text-color;
-  padding: $padding-base * 2 $padding-base;
-  text-align: center;
-  border-top: 1px solid #e7e7e7;
-
-  p {
-    margin: 0;
-    font-size: 0.9em;
-  }
-
-  a {
-    color: $primary-color;
-    text-decoration: none;
-    
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.footer {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  color: #333;
 }
 
-.socialLinks {
-  margin-top: $padding-base;
+.footerColumns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
 
-  a {
-    margin: 0 10px;
-    font-size: 1.2em;
-    color: $text-color;
+.column h4 {
+  margin-bottom: 1rem;
+}
 
-    &:hover {
-      color: darken($primary-color, 10%);
-    }
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 0.5rem;
+}
+
+.column a {
+  text-decoration: none;
+  color: #333;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+  padding-top: 1rem;
+}
+
+/* Dark Mode Styles */
+body.dark-theme .footer {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-theme .column a {
+  color: #fff;
+}
+
+body.dark-theme .copyright {
+  border-top-color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footerColumns {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 }

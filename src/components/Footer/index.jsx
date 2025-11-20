@@ -1,33 +1,37 @@
-import styles from "./Footer.module.scss"; // Importa os estilos SCSS como um objeto
+import styles from './Footer.module.scss';
 
 function Footer() {
   return (
-    <footer className={styles.footerContainer}>
-      <p>
-        &copy; {new Date().getFullYear()} Passóia. Todos os direitos
-        reservados.
-      </p>
-      <div className={styles.socialLinks}>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          Facebook
-        </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          Twitter
-        </a>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
+    <footer className={styles.footer}>
+      <div className={styles.footerColumns}>
+        <div className={styles.column}>
+          <h4>Atendimento</h4>
+          <ul>
+            <li><a href="#">Central de Atendimento</a></li>
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+          </ul>
+        </div>
+        <div className={styles.column}>
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#">Quem Somos</a></li>
+            <li><a href="#">Nossas Lojas</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+          </ul>
+        </div>
+        <div className={styles.column}>
+          <h4>Nossas Redes</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
       </div>
-      <p>
-        Desenvolvido com ❤️ por{" "}
-        <a href="https://github.com/Shiver3d" target="_blank" rel="noopener noreferrer">
-          Shiver3d
-        </a>
-      </p>
+      <div className={styles.copyright}>
+        <p>&copy; {new Date().getFullYear()} Passóia. Todos os direitos reservados.</p>
+      </div>
     </footer>
   );
 }
