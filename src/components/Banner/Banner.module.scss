@@ -1,6 +1,5 @@
 .banner {
   width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -8,8 +7,4 @@
 .bannerImage {
   width: 100%;
   height: auto;
-}
-
-body.dark-theme .banner {
-  background-color: #444;
 }

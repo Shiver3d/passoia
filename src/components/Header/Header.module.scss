@@ -3,13 +3,83 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--bg);
+  color: var(--text);
   transition: background-color 0.3s, color 0.3s;
 }
 
 .logo {
   height: 50px;
+}
+
+.hamburgerButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: none; // menu aparecendo somente no mobile
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburgerIcon {
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  position: relative;
+}
+
+.hamburgerIcon::before,
+.hamburgerIcon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+}
+
+.hamburgerIcon::before { top: -7px; }
+.hamburgerIcon::after { top: 7px; }
+
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 80;
+}
+
+.sideMenu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: -8px 0 24px rgba(0,0,0,0.12);
+  padding: 1.25rem;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menuNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.menuToggleButton {
+  margin-top: auto;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .nav ul {
@@ -25,50 +95,49 @@
 
 .nav a {
   text-decoration: none;
-  color: #000;
+  color: var(--link);
   font-weight: bold;
 }
 
 .toggleButton {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--text);
+  color: var(--bg);
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
 }
 
-
-body.dark-theme .header {
-  background-color: #333;
-  color: #fff;
-}
-
-body.dark-theme .nav a {
-  color: #fff;
-}
-
-body.dark-theme .toggleButton {
-  background-color: #fff;
-  color: #000;
-}
-
 // Responsividade
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
   }
 
-  .nav {
+  /* show hamburger on small screens so menu is available on mobile */
+
+.nav ul {
+    display: none;
+  }
+
+.toggleButton {
+    display: none;
+  }
+
+  .hamburgerButton {
+    display: flex;
+  }
+
+  /* Ensure the menu toggle inside the side menu is easy to see on mobile */
+  .menuToggleButton {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-weight: 600;
+    border-radius: 8px;
     margin-top: 1rem;
-  }
-
-  .nav li {
-    margin: 0 1rem;
-  }
-
-  .toggleButton {
-    margin-top: 1rem;
+    text-align: center;
   }
 }
 

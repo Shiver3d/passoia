@@ -1,30 +1,46 @@
+
 .lancamentos {
-  padding: 2rem;
+  padding: 1.25rem; 
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .card {
   display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-  background-color: #f9f9f9;
-  padding: 2rem;
+  gap: 1.25rem; 
+  margin-top: 0.9rem;
+  background-color: var(--card-bg);
+  padding: 1.25rem; 
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px; 
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .imageContainer {
-  flex: 1;
+  flex: 0 0 460px; /* increased so image is slightly larger */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
 }
-
 .mainImage {
   width: 100%;
+  max-width: 460px; /* constrain to the container */
   height: auto;
   border-radius: 10px;
+  display: block;
 }
 
 .info {
   flex: 1;
   text-align: left;
+  word-wrap: break-word;
+  min-width: 0; /* allow flex item to shrink and prevent overflow */
 }
 
 .colorOptions {
@@ -32,10 +48,9 @@
   gap: 1rem;
   margin: 1rem 0;
 }
-
 .colorButton {
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 2px solid #fff;
   cursor: pointer;
@@ -47,19 +62,19 @@
 .marrom { background-color: #a52a2a; }
 
 .price {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
   margin: 1rem 0;
 }
 
 .buyButton {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--text);
+  color: var(--bg);
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-size: 1.05rem;
 }
 
 .paymentMethods {
@@ -67,29 +82,22 @@
 }
 
 .paymentMethods img {
-  height: 20px;
+  height: 22px;
   margin-right: 0.5rem;
-}
-
-/* Dark Mode Styles */
-body.dark-theme .lancamentos {
-  background-color: #222;
-  color: #fff;
-}
-
-body.dark-theme .card {
-  background-color: #333;
-}
-
-body.dark-theme .buyButton {
-  background-color: #fff;
-  color: #000;
 }
 
 //responsividade
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
+  }
+  .imageContainer {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 420px;
+  }
+  .mainImage {
+    max-width: 100%;
   }
 }
 

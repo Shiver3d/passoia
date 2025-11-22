@@ -1,6 +1,6 @@
 .novidades {
   width: 100%;
-  display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
@@ -9,9 +9,4 @@
 .novidadesImage {
   width: 100%;
   height: auto;
-}
-
-// tentativa de tema escuro
-body.dark-theme .novidades {
-  background-color: #444;
 }
