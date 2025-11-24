@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import Logo from '../../assets/LogoPrincipal.png';
 import LogoAlt from '../../assets/LogoPrincipalAlt.png';
+import SolIcon from '../../assets/sol.svg';
+import LuaIcon from '../../assets/lua.svg';
 import styles from './Header.module.scss';
 
 function Header() {
@@ -54,7 +56,7 @@ function Header() {
         aria-pressed={darkMode}
         aria-label={darkMode ? 'Ativar modo claro' : 'Ativar modo escuro'}
       >
-        {darkMode ? 'Light Mode' : 'Dark Mode'}
+        <img src={darkMode ? LuaIcon : SolIcon} alt={darkMode ? 'Ícone do sol' : 'Ícone da lua'} />
       </button>
 
       {/* Ícone hamburger */}
@@ -105,7 +107,7 @@ function Header() {
               onClick={() => { toggleDarkMode(); }}
               aria-pressed={darkMode}
             >
-              {darkMode ? 'Light Mode' : 'Dark Mode'}
+              <img src={darkMode ? LuaIcon : SolIcon} alt={darkMode ? 'Ícone do sol' : 'Ícone da lua'} />
             </button>
           </aside>
         </>

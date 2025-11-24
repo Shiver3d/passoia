@@ -108,11 +108,18 @@
 .menuToggleButton {
   margin-top: auto;
   background: var(--text);
-  color: var(--bg);
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 6px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuToggleButton img {
+  width: 24px;
+  height: 24px;
 }
 
 .nav ul {
@@ -135,11 +142,18 @@
 
 .toggleButton {
   background-color: var(--text);
-  color: var(--bg);
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleButton img {
+  width: 24px;
+  height: 24px;
 }
 
 // Responsividade
