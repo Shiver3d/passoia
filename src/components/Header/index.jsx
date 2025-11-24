@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Logo from '../../assets/LogoPrincipal.png';
 import LogoAlt from '../../assets/LogoPrincipalAlt.png';
 import styles from './Header.module.scss';
@@ -15,11 +15,27 @@ function Header() {
     document.body.classList.toggle('dark-theme', next);
   };
 
-  // hamburger menu state
+  // estado do menu hamburger
   const [menuOpen, setMenuOpen] = useState(false);
+  // controlar montagem do menu para permitir animações de fechamento
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const overlayRef = useRef(null);
+  const sideRef = useRef(null);
 
   const openMenu = () => setMenuOpen(true);
   const closeMenu = () => setMenuOpen(false);
+
+  // quando menuOpen muda, controlar montagem/fechamento
+  useEffect(() => {
+    if (menuOpen) {
+      setMenuVisible(true);
+      setIsClosing(false);
+    } else if (menuVisible) {
+      // inicia animação de fechamento
+      setIsClosing(true);
+    }
+  }, [menuOpen]);
   return (
     <header className={styles.header}>
   <img src={darkMode ? LogoAlt : Logo} alt="Passoia Logo" className={styles.logo} />
@@ -41,7 +57,7 @@ function Header() {
         {darkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
 
-      {/* Hamburger icon*/}
+      {/* Ícone hamburger */}
       <button
         className={styles.hamburgerButton}
         aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
@@ -51,16 +67,39 @@ function Header() {
         <span className={styles.hamburgerIcon} aria-hidden="true" />
       </button>
 
-      {/* menu lateral */}
-      {menuOpen && (
+      {/* menu lateral com animação de entrada/saída */}
+      {menuVisible && (
         <>
-          <div className={styles.menuOverlay} onClick={closeMenu} />
-          <aside className={styles.sideMenu} role="dialog" aria-modal="true">
-            <div className={styles.menuNav}>
-              <div className={styles.menuItem}><a href="#" onClick={closeMenu}>Looks</a></div>
-              <div className={styles.menuItem}><a href="#" onClick={closeMenu}>Lançamentos</a></div>
-              <div className={styles.menuItem}><a href="#" onClick={closeMenu}>Novidades</a></div>
-            </div>
+          <div
+            ref={overlayRef}
+            className={`${styles.menuOverlay} ${isClosing ? styles.closingOverlay : ''}`}
+            onClick={closeMenu}
+            onAnimationEnd={() => {
+              if (isClosing) {
+                setMenuVisible(false);
+                setIsClosing(false);
+              }
+            }}
+          />
+          <aside
+            ref={sideRef}
+            className={`${styles.sideMenu} ${isClosing ? styles.closingSideMenu : ''}`}
+            role="dialog"
+            aria-modal="true"
+            onAnimationEnd={() => {
+              if (isClosing) {
+                setMenuVisible(false);
+                setIsClosing(false);
+              }
+            }}
+          >
+            <nav className={styles.menuNav} aria-label="Menu lateral">
+              <ul>
+                <li className={styles.menuItem}><a href="#Looks" onClick={closeMenu}>Looks</a></li>
+                <li className={styles.menuItem}><a href="#Lançamentos" onClick={closeMenu}>Lançamentos</a></li>
+                <li className={styles.menuItem}><a href="#Novidades" onClick={closeMenu}>Novidades</a></li>
+              </ul>
+            </nav>
             <button
               className={styles.menuToggleButton}
               onClick={() => { toggleDarkMode(); }}

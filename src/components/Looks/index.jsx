@@ -62,7 +62,7 @@ function Looks() {
     <section className={styles.looks}>
       <h2 id="Looks">LOOKS E TIPOS DE MAQUIAGEM</h2>
 
-      {/* Desktop / tablet grid */}
+      {/* Grid para desktop/tablet */}
       <div className={styles.grid}>
         {slides.map((src, i) => (
           <div key={i} className={styles.gridItem}>
@@ -71,7 +71,7 @@ function Looks() {
         ))}
       </div>
 
-      {/* Mobile interactive carousel */}
+      {/* Carrossel interativo para mobile */}
       <div className={styles.carousel}>
         <div className={styles.viewport}>
           <div

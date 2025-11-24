@@ -22,7 +22,7 @@
 }
 
 .imageContainer {
-  flex: 0 0 460px; /* increased so image is slightly larger */
+  flex: 0 0 460px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,17 +30,20 @@
 }
 .mainImage {
   width: 100%;
-  max-width: 460px; /* constrain to the container */
+  max-width: 460px; // restringe ao contêiner
   height: auto;
   border-radius: 10px;
   display: block;
+  transition: opacity 180ms ease, transform 180ms ease;
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .info {
   flex: 1;
   text-align: left;
   word-wrap: break-word;
-  min-width: 0; /* allow flex item to shrink and prevent overflow */
+  min-width: 0; // permite que o item flex encolha e previne overflow
 }
 
 .colorOptions {
@@ -49,8 +52,8 @@
   margin: 1rem 0;
 }
 .colorButton {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: 2px solid #fff;
   cursor: pointer;
@@ -58,8 +61,8 @@
 
 .vermelho { background-color: #ff0000; }
 .rosa { background-color: #ffc0cb; }
-.roxo { background-color: #800080; }
-.marrom { background-color: #a52a2a; }
+.roxo { background-color: #858ac0; }
+.marrom { background-color: #7E4037; }
 
 .price {
   font-size: 1.75rem;
@@ -86,7 +89,7 @@
   margin-right: 0.5rem;
 }
 
-//responsividade
+// Responsividade
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
@@ -99,6 +102,27 @@
   .mainImage {
     max-width: 100%;
   }
+}
+
+//Classes auxiliares para crossfade (usa keyframes para funcionar ao montar o elemento)
+@keyframes bFadeOut {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0.9; transform: translateY(0) scale(0.995); }
+}
+@keyframes bFadeIn {
+  from { opacity: 0.9; transform: translateY(0) scale(0.995); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.mainImage.exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: bFadeOut 200ms ease forwards;
+}
+.mainImage.enter {
+  animation: bFadeIn 200ms ease forwards;
 }
 
 @media (max-width: 468px) {

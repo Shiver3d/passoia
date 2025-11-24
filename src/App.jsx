@@ -5,7 +5,7 @@ import Batoes from './components/Card-batoes/index.jsx'
 import Novidades from './components/Novidades/index.jsx'
 import Footer from './components/Footer/index.jsx'
 
-
+// componente principal que agrega todas as seções da página
 function App(){
   return (
     <>
