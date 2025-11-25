@@ -2,9 +2,9 @@
 
 ***🌸 Sobre o Projeto***
 
-O **Passoia** é uma Landing Page moderna e totalmente responsiva, criada para simular um site de maquiagens com foco em **interatividade** e **experiência do usuário**.
+O **Passoia** é uma página moderna e totalmente responsiva, criada para simular um site de maquiagens com foco em **interatividade** e **experiência do usuário**.
 
-A principal funcionalidade do projeto é permitir que a usuária escolha diferentes **cores de batom**, e uma das modelos na tela **troca a cor automaticamente** conforme a opção selecionada — tudo feito com JavaScript integrado a componentes React.
+A principal funcionalidade do projeto é permitir que o usuário escolha diferentes **cores de batom**, e uma das modelos na tela **troca a cor** conforme a opção selecionada — tudo feito com JavaScript integrado a componentes React.
 
 ---
 
