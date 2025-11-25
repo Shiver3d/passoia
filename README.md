@@ -1,19 +1,40 @@
+# 💄 Passoia - Beleza, Interatividade e Criatividade
 
-Readme default do react e vite, mexerei posteriormente
+***🌸 Sobre o Projeto***
 
-# React + Vite
+O **Passoia** é uma Landing Page moderna e totalmente responsiva, criada para simular um site de maquiagens com foco em **interatividade** e **experiência do usuário**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A principal funcionalidade do projeto é permitir que a usuária escolha diferentes **cores de batom**, e uma das modelos na tela **troca a cor automaticamente** conforme a opção selecionada — tudo feito com JavaScript integrado a componentes React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+***🎯 Desafio Vai na Web***
 
-## React Compiler
+Este projeto foi desenvolvido como parte de um **desafio da Escola Vai na Web**, com o objetivo de praticar e consolidar conceitos essenciais do desenvolvimento frontend:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **React:** criação de componentes reutilizáveis, estados e manipulação dinâmica da interface.
+2. **SCSS:** uso de variáveis, aninhamento e organização modular para estilização escalável.
+3. **JavaScript:** lógica para atualizar a cor do batom de forma dinâmica e fluida.
+4. **Responsividade:** layout totalmente adaptável para telas pequenas, médias e grandes.
+5. **Experiência do Usuário:** foco em gestos simples, organização visual e interação intuitiva.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tecnologias Utilizadas
+
+- **React**  
+- **SCSS (SASS)**  
+- **JavaScript**  
+- **Google Fonts**  
+
+---
+
+## 🌐 Links Úteis
+
+- **Site Online:** https://passoia-tau.vercel.app/  
+- **Repositório:** https://github.com/Shiver3d/passoia  
+
+---
+
+Qualquer dúvida ou sugestão, fale comigo:  
+https://www.linkedin.com/in/daniel-lopes-shiver3d/
